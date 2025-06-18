@@ -9,7 +9,7 @@ import { Slider } from "@/components/ui/slider"
 import { Checkbox } from "@/components/ui/checkbox"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Progress } from "@/components/ui/progress"
-import { Clock, Euro, ArrowRight, Download, Calendar, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react"
+import { Clock, Euro, ArrowRight, Calendar, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react"
 
 interface FormData {
   companyName: string
@@ -127,7 +127,7 @@ export default function BusinessAuditTool() {
               <h1 className="text-4xl font-bold text-gray-900">Audyt Automatyzacji Twojego Biura Podróży</h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Odkryj, ile godzin i pieniędzy tracisz na ręcznej pracy. Wypełnij ankietę w 3 minuty i otrzymaj
-                bezpłatny, spersonalizowany raport dostępny od razu online i w formie PDF.
+                bezpłatny, spersonalizowany raport dostępny od razu online.
               </p>
               <div className="bg-blue-50 p-4 rounded-lg max-w-2xl mx-auto">
                 <p className="text-blue-800 text-sm">
@@ -605,14 +605,15 @@ export default function BusinessAuditTool() {
                 Umów się na bezpłatną, 15-minutową konsultację strategiczną, podczas której pokażę Ci, jak DOKŁADNIE
                 wdrożyć te automatyzacje w Twoim biurze. Bez zobowiązań, bez lania wody.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
+              <div className="flex justify-center">
+                <Button
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg"
+                  onClick={() =>
+                    window.open("https://calendly.com/siemaszkiewiczpiotr/darmowa-konsultacja-15-min-clone", "_blank")
+                  }
+                >
                   <Calendar className="h-5 w-5 mr-2" />
                   Umów Bezpłatną Konsultację
-                </Button>
-                <Button variant="outline" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
-                  <Download className="h-5 w-5 mr-2" />
-                  Pobierz Raport w PDF
                 </Button>
               </div>
             </div>
